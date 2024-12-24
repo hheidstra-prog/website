@@ -58,7 +58,7 @@ export default function About() {
     <Container className="mt-16 sm:mt-32">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
         <div className="lg:pl-20">
-          <div className="max-w-xs px-2.5 lg:max-w-none">
+          <div className="max-w-xs px-2.5 lg:max-w-[300px]">
             <Image
               src={portraitImage}
               alt=""
@@ -67,16 +67,15 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="lg:order-first lg:row-span-2">
+        <div className="lg:order-first lg:row-span-3">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Welkom bij Digitaalfabriek - Jouw Partner in AI Innovatie
-            Mijn naam is Hylke Heidstra en ik ben softwaredesigner, ondernemer en gepassioneerd fotograaf.
+            Welkom bij Digitaalfabriek <br/> <span className='text-2xl'>Jouw Partner in AI Innovatie</span>
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              Ben jij op zoek naar kunstmatige intelligentie oplossingen die jouw bedrijf 
-              naar een hoger niveau tillen? Bij Digitaalfabriek specialiseren we ons in AI 
-              consultancy in Nederland en bieden we op maat gemaakte technologieën 
+              Ben jij op zoek naar <strong className="dark:text-zinc-100">kunstmatige intelligentie oplossingen </strong> 
+              die jouw bedrijf naar een hoger niveau tillen? Bij Digitaalfabriek specialiseren we ons in AI 
+              automatisering en consultancy in Nederland. We bieden op maat gemaakte technologieën 
               die aansluiten bij jouw bedrijfsdoelen.
             </p>
             <p>
@@ -88,15 +87,15 @@ export default function About() {
 
             <h2 className='text-2xl font-bold dark:text-zinc-300'>Onze Diensten</h2>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Kunstmatige intelligentie oplossingen: Van concept tot realisatie.</li>
-              <li>Automatisering met AI: Efficiëntie verhogen door intelligente systemen.</li>
-              <li>Implementatie van AI in bedrijfsprocessen: Zorgeloos integreren van AI in jouw bedrijf.</li>
+              <li><p><strong className="dark:text-zinc-100">Kunstmatige intelligentie oplossingen</strong>: Van concept tot realisatie.</p></li>
+              <li><p><strong className="dark:text-zinc-100">Automatisering met AI</strong>: Efficiëntie verhogen door intelligente systemen.</p></li>
+              <li><p><strong className="dark:text-zinc-100">Implementatie van AI</strong> in bedrijfsprocessen: Zorgeloos integreren van AI in jouw bedrijf.</p></li>
             </ul>
             <p>
-              Wij richten ons specifiek op AI-oplossingen voor mkb-bedrijven in Nederland, zodat ook kleinere organisaties kunnen profiteren van de kracht van kunstmatige intelligentie. Ontdek hoe wij jouw bedrijf kunnen helpen transformeren.
+              Wij richten ons specifiek op <strong className="dark:text-zinc-100">AI-oplossingen voor mkb-bedrijven in Nederland</strong>, 
+              zodat ook kleinere organisaties kunnen profiteren van de kracht van kunstmatige 
+              intelligentie. Ontdek hoe wij jouw bedrijf kunnen helpen transformeren.
             </p>
-
-
             <p>
               Als softwaredesigner combineer ik creativiteit en technische 
               kennis om innovatieve applicaties te ontwikkelen die bedrijven 
@@ -110,12 +109,6 @@ export default function About() {
               technische oplossingen te leveren, maar ook strategisch advies 
               dat bedrijven écht verder brengt.
             </p>
-            <h2 className='text-2xl font-bold dark:text-zinc-300'>Fotografie: Zeilen en Landschappen</h2>
-            <p>
-              Naast mijn werk in de technologie ben ik een gepassioneerd landschapsfotograaf en zeiler. 
-              Mijn camera brengt me naar de mooiste plekken, van serene wateren tot ruige 
-              natuur, en ik deel deze momenten graag met anderen via mijn werk.
-            </p>
             <h2 className='text-2xl font-bold dark:text-zinc-300'>Waarom samenwerken?</h2>
             <p>
               Mijn unieke mix van technische expertise, ondernemersmentaliteit en creatieve 
@@ -123,7 +116,8 @@ export default function About() {
               Ik geloof in samenwerking, duidelijke communicatie en het bouwen van 
               langdurige relaties met mijn klanten.
 
-              Maak een afspraak om uw ideeën tot leven brengen. Neem gerust contact met me op!
+              Maak een afspraak om uw ideeën tot leven brengen. 
+              <br/><br/><strong className="dark:text-zinc-400">Neem gerust contact met me op!</strong>
             </p>            
           </div>
         </div>

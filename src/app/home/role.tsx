@@ -1,45 +1,56 @@
 import Image, { type ImageProps } from 'next/image'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
-import { Button } from '@/components/Button'
-import { ArrowDownIcon, BriefcaseIcon } from './icons/icons'
+import logoPectora from '@/images/logos/Pectora.jpg'
+import logoSitecore from '@/images/logos/sitecore.png'
+import logoBC from '@/images/logos/bc.png'
+import logoClever from '@/images/logos/cleverbyai.png'
+import logoSpothunter from '@/images/logos/spothunter.jpg'
+//import { Button } from '@/components/Button'
+import { BriefcaseIcon } from './icons/icons'
 
 
 
 export default function Resume() {
     let resume: Array<Role> = [
       {
-        company: 'Planetaria',
-        title: 'CEO',
-        logo: logoPlanetaria,
-        start: '2019',
+        company: 'CleverBy.AI',
+        title: 'CEO, co-founder',
+        logo: logoClever,
+        start: '2025',
         end: {
           label: 'Present',
           dateTime: new Date().getFullYear().toString(),
         },
       },
       {
-        company: 'Airbnb',
-        title: 'Product Designer',
-        logo: logoAirbnb,
-        start: '2014',
-        end: '2019',
+        company: 'Spothunter',
+        title: 'founder',
+        logo: logoSpothunter,
+        start: '2024',
+        end: {
+          label: 'Present',
+          dateTime: new Date().getFullYear().toString(),
+        },
+      },   
+      {
+        company: 'BigCommerce',
+        title: 'Senior Sales Manager',
+        logo: logoBC,
+        start: '2011',
+        end: '2022',
+      },      
+      {
+        company: 'Sitecore',
+        title: 'Senior Product Manager',
+        logo: logoSitecore,
+        start: '2011',
+        end: '2020',
       },
       {
-        company: 'Facebook',
-        title: 'iOS Software Engineer',
-        logo: logoFacebook,
+        company: 'Pectora',
+        title: 'CEO',
+        logo: logoPectora,
         start: '2011',
         end: '2014',
-      },
-      {
-        company: 'Starbucks',
-        title: 'Shift Supervisor',
-        logo: logoStarbucks,
-        start: '2008',
-        end: '2011',
       },
     ]
   
@@ -54,10 +65,12 @@ export default function Resume() {
             <Role key={roleIndex} role={role} />
           ))}
         </ol>
+        {/*
         <Button href="#" variant="secondary" className="group mt-6 w-full">
           Download CV
           <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
         </Button>
+        */}
       </div>
     )
   }

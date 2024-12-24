@@ -50,7 +50,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'Ik ben Hylke Heidstra. Software ontwerper en ondernemer met een specialisatie in AI',
 }
 
 export default function About() {
@@ -69,40 +69,67 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            Welkom bij Digitaalfabriek - Jouw Partner in AI Innovatie
+            Mijn naam is Hylke Heidstra en ik ben softwaredesigner, ondernemer en gepassioneerd fotograaf.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              Ben jij op zoek naar kunstmatige intelligentie oplossingen die jouw bedrijf 
+              naar een hoger niveau tillen? Bij Digitaalfabriek specialiseren we ons in AI 
+              consultancy in Nederland en bieden we op maat gemaakte technologieën 
+              die aansluiten bij jouw bedrijfsdoelen.
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              Met onze expertise in automatisering met AI helpen we bedrijven om processen 
+              te optimaliseren, kosten te besparen en waarde te creëren. Of het nu gaat om 
+              het implementeren van slimme algoritmen, data-analyse of geavanceerde machine 
+              learning, wij zorgen voor een oplossing die werkt.
             </p>
+
+            <h2 className='text-2xl font-bold dark:text-zinc-300'>Onze Diensten</h2>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Kunstmatige intelligentie oplossingen: Van concept tot realisatie.</li>
+              <li>Automatisering met AI: Efficiëntie verhogen door intelligente systemen.</li>
+              <li>Implementatie van AI in bedrijfsprocessen: Zorgeloos integreren van AI in jouw bedrijf.</li>
+            </ul>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              Wij richten ons specifiek op AI-oplossingen voor mkb-bedrijven in Nederland, zodat ook kleinere organisaties kunnen profiteren van de kracht van kunstmatige intelligentie. Ontdek hoe wij jouw bedrijf kunnen helpen transformeren.
             </p>
+
+
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              Als softwaredesigner combineer ik creativiteit en technische 
+              kennis om innovatieve applicaties te ontwikkelen die bedrijven 
+              vooruithelpen. Ik werk daarbij nauw samen met andere specialisten
+              die tot de top behoren.
             </p>
+            <h2 className='text-2xl font-bold dark:text-zinc-300'>Ondernemer en probleemoplosser</h2>
+            <p>
+              Als ondernemer begrijp ik de uitdagingen waarmee bedrijven 
+              worden geconfronteerd. Mijn ervaring helpt me om niet alleen 
+              technische oplossingen te leveren, maar ook strategisch advies 
+              dat bedrijven écht verder brengt.
+            </p>
+            <h2 className='text-2xl font-bold dark:text-zinc-300'>Fotografie: Zeilen en Landschappen</h2>
+            <p>
+              Naast mijn werk in de technologie ben ik een gepassioneerd landschapsfotograaf en zeiler. 
+              Mijn camera brengt me naar de mooiste plekken, van serene wateren tot ruige 
+              natuur, en ik deel deze momenten graag met anderen via mijn werk.
+            </p>
+            <h2 className='text-2xl font-bold dark:text-zinc-300'>Waarom samenwerken?</h2>
+            <p>
+              Mijn unieke mix van technische expertise, ondernemersmentaliteit en creatieve 
+              passie stelt mij in staat om innovatieve en praktische oplossingen te leveren. 
+              Ik geloof in samenwerking, duidelijke communicatie en het bouwen van 
+              langdurige relaties met mijn klanten.
+
+              Maak een afspraak om uw ideeën tot leven brengen. Neem gerust contact met me op!
+            </p>            
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
+            {/*
             <SocialLink href="#" icon={XIcon}>
               Follow on X
             </SocialLink>
@@ -112,15 +139,16 @@ export default function About() {
             <SocialLink href="#" icon={GitHubIcon} className="mt-4">
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+            */}
+            <SocialLink href="https://www.linkedin.com/in/hylkeheidstra/" icon={LinkedInIcon} className="mt-4">
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
+              href="mailto:hheidstra@live.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              spencer@planetaria.tech
+              info@digitaalfabriek.nl
             </SocialLink>
           </ul>
         </div>

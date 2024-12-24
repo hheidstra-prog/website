@@ -5,7 +5,7 @@ import { formatDate } from "@/lib/formatDate";
 
 export default function Article({ article }: { article: ArticleWithSlug }) {
     return (
-      <Card as="article">
+      <Card as="article" className="min-w-[300px] max-w-[300px] flex-shrink-0 p-4 mt-2 bg-slate-100 dark:bg-black rounded-2xl">
         <Card.Title href={`/articles/${article.slug}`}>
           {article.title}
         </Card.Title>

@@ -1,11 +1,12 @@
 import { Container } from '@/components/Container'
 import { getAllArticles } from '@/lib/articles'
-import Photos from './home/photos'
 import Newsletter from './home/newsletter'
 import Resume from './home/role'
 
 import Article from './home/article'
 import Intro from './home/intro'
+import Photos from './home/photos'
+import Title from './home/title'
 
 
 export default async function Home() {
@@ -13,17 +14,18 @@ export default async function Home() {
   let articles = (await getAllArticles()).slice(0, 4)
 
   return (
-    <>
-      <Container className="mt-9">
-        <Intro/>
+    <div className=''>
+
+    <Container className="mt-[100px]">
+        <Title/>
       </Container>
-      <Photos />
-      <Container className="mt-24 md:mt-28">
+      <div className="mb-12">
+        <Photos />
+      </div>
+      <Container className="mt-10 md:mt-18">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
+          <Intro/>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
@@ -31,6 +33,13 @@ export default async function Home() {
           </div>
         </div>
       </Container>
-    </>
+      <Container className="mt-10 md:mt-18">
+        <div className="flex overflow-x-auto gap-6 pb-4 hide-vertical-scroll w-full">
+            {articles.map((article) => (
+              <Article key={article.slug} article={article} />
+            ))}
+          </div>
+        </Container>
+    </div>
   )
 }

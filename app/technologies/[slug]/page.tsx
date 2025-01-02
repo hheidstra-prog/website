@@ -1,11 +1,15 @@
 import { Container } from "@/app/components/Container";
 import { LinkIcon } from "@/app/components/icons";
 import { Prose } from "@/app/components/Prose";
+import SanityContent from "@/app/components/sanityContent";
 import { fetchTechnologyBySlug } from "@/app/lib/queries";
-import { sanityClient, urlFor } from "@/app/lib/sanityClient";
-import { SanityImage, Technology } from "@/app/lib/types";
-import { PortableText } from "next-sanity";
+import { sanityClient } from "@/app/lib/sanityClient";
+import { Technology } from "@/app/lib/types";
+import { PortableTextBlock } from "next-sanity";
+//import { PortableText } from "next-sanity";
 import Image from "next/image";
+
+
 
 type Params = {
     params: Promise<{ slug: string }>; // Ensure the type accounts for Promise
@@ -87,28 +91,7 @@ export default async function Page({ params }: Params) {
                         )}
                     </header>
                     <Prose className="mt-8" data-mdx-content>
-                         {/* Body */}
-                        <div className="mt-8 prose dark:prose-invert">
-                            <PortableText
-                                value={technology.body}
-                                components={{
-                                types: {
-                                    image: ({ value }: { value: SanityImage }) => (
-                                        <div>
-                                        <Image
-                                            src={urlFor(value).width(800).url()}
-                                            alt={value.alt || "Image"}
-                                            className="rounded-lg"
-                                            width={800}
-                                            height={400}
-                                            priority
-                                        />
-                                        </div>
-                                    ),
-                                },
-                            }}
-                            />
-                        </div>
+                      <SanityContent body={technology.body as PortableTextBlock[]}/>
                     </Prose>
                 </article>
             </div>

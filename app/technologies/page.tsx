@@ -9,8 +9,8 @@ import { type Metadata } from 'next'
 
 
 export const metadata: Metadata = {
-  title: 'Tools',
-  description: 'Software I use, gadgets I love, and other things I recommend.',
+  title: 'Technologieën | Tools en Platforms voor AI en Softwareontwikkeling',
+  description: 'Een overzicht van de technologieën en tools die ik gebruik voor AI-toepassingen, automatisering en softwareontwikkeling. Van machine learning tot geavanceerde frameworks.',
 }
 
 export default async function Uses() {

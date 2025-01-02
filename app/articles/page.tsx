@@ -9,9 +9,9 @@ import { extractText } from '../lib/utils';
 
 
 export const metadata: Metadata = {
-  title: 'Articles',
+  title: 'Blogartikelen | AI Consultancy, Automatisering en Technologie-Inzichten',
   description:
-    'All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order.',
+    'Ontdek inspirerende blogartikelen over AI-toepassingen, automatisering en technologie. Praktische inzichten en tips voor bedrijven in Nederland die willen groeien met kunstmatige intelligentie.',
 }
 
 
@@ -23,8 +23,9 @@ export default async function ArticlesIndex() {
   return (
 
       <SimpleLayout
-        title="Writing on software design, company building, and the aerospace industry."
-        intro="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
+        title="Lees meer over software design, AI toepassingen en praktische inzichten en tips."
+        intro="Ontdek inspirerende blogartikelen over AI-toepassingen, 
+        automatisering en technologie. Praktische inzichten en tips voor bedrijven in Nederland die willen groeien met kunstmatige intelligentie."
       >
       <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
         <div className="flex max-w-3xl flex-col space-y-16">

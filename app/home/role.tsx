@@ -5,6 +5,7 @@ import logoBC from '@/images/logos/bc.png'
 import logoClever from '@/images/logos/cleverbyai.png'
 import logoSpothunter from '@/images/logos/spothunter.jpg'
 import { BriefcaseIcon } from '../components/icons'
+import logoFabriek from '@/images/logos/logog-dark.png'
 
 
 
@@ -14,12 +15,22 @@ export default function Resume() {
         company: 'CleverBy.AI',
         title: 'CEO, co-founder',
         logo: logoClever,
-        start: '2025',
+        start: '2024',
         end: {
           label: 'Present',
           dateTime: new Date().getFullYear().toString(),
         },
       },
+      {
+        company: 'Digitaal Fabriek',
+        title: 'CEO, founder',
+        logo: logoFabriek,
+        start: '2024',
+        end: {
+          label: 'Present',
+          dateTime: new Date().getFullYear().toString(),
+        },
+      },      
       {
         company: 'Spothunter',
         title: 'founder',
@@ -34,8 +45,8 @@ export default function Resume() {
         company: 'BigCommerce',
         title: 'Senior Sales Manager',
         logo: logoBC,
-        start: '2011',
-        end: '2022',
+        start: '2021',
+        end: '2023',
       },      
       {
         company: 'Sitecore',
@@ -49,7 +60,7 @@ export default function Resume() {
         title: 'CEO',
         logo: logoPectora,
         start: '2003',
-        end: '2014',
+        end: '2011',
       },
     ]
   

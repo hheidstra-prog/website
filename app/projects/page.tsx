@@ -9,8 +9,8 @@ import { Project } from '../lib/types'
 
 
 export const metadata: Metadata = {
-  title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  title: 'Projecten | Innovatieve AI-oplossingen en Automatisering in Actie',
+  description: 'Bekijk een overzicht van projecten waarin ik bedrijven heb geholpen met AI-toepassingen, automatisering en maatwerksoftware. Ontdek hoe technologie jouw bedrijf kan transformeren.',
 }
 
 

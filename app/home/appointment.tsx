@@ -8,13 +8,23 @@ import { useRouter } from "next/navigation";
 
 export default function Appointment() {
 
+  const getCurrentDate = () => {
+    const date = new Date();
+    return date.toISOString().split('T')[0]; // Formats as YYYY-MM-DD
+  };
+  
+  const getCurrentTime = () => {
+    const date = new Date();
+    return date.toTimeString().slice(0, 5); // Formats as HH:MM
+  };  
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     phone: '',
     email: '',
-    date: '',
-    time: '',
+    date: getCurrentDate(),
+    time: getCurrentTime(),
   });
 
   const [error, setError] = useState<string | null>(null);
@@ -61,6 +71,8 @@ export default function Appointment() {
       setIsSubmitting(false);
     }
   };
+
+
 
   return (
     <form

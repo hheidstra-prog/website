@@ -24,7 +24,8 @@ export default function Intro() {
             </p>
             <h2 className='text-2xl font-bold dark:text-zinc-300'>Onze Diensten</h2>
             <ul className="list-disc pl-5 space-y-2">
-              <li><p><strong className="dark:text-zinc-100">Kunstmatige intelligentie oplossingen</strong>: Van concept tot realisatie.</p></li>
+              <li><p><strong className="dark:text-zinc-100">Web applicaties, mobile applicaties</strong>: Van concept tot realisatie.</p></li>
+              <li><p><strong className="dark:text-zinc-100">Kunstmatige intelligentie oplossingen</strong>: Van visie tot implementatie.</p></li>
               <li><p><strong className="dark:text-zinc-100">Automatisering met AI</strong>: Efficiëntie verhogen door intelligente systemen.</p></li>
               <li><p><strong className="dark:text-zinc-100">Implementatie van AI</strong> in bedrijfsprocessen: Zorgeloos integreren van AI in jouw bedrijf.</p></li>
             </ul>
@@ -49,7 +50,7 @@ export default function Intro() {
             />
             */}
             <SocialLink
-              href="https://www.linkedin.com/in/hylkeheidstra/"
+              href="https://www.linkedin.com/company/digitaal-fabriek"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
               target="_blank"

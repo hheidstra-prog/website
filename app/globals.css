@@ -2,23 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* spining circles */
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
-}
+  
+  @keyframes spin-reverse {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  .animate-spin-circle {
+    animation: spin 4s linear infinite; /* Adjust duration and easing as needed */
+  }
+
+  .animate-spin-slow {
+    animation: spin 5s linear infinite;
+    transform-origin: center center; /* Ensures rotation happens around the center */
+  }
+  
+  .animate-spin-reverse-slower {
+    animation: spin-reverse 20s linear infinite;
+    transform-origin: center center; /* Ensures rotation happens around the center */
+  }
+
+ /*  newsletter circel */
+  @keyframes rotateCircle {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animated-circle {
+    animation: rotateCircle 5s linear infinite; /* Adjust speed by changing 20s */
+  }
+
+
+  /* counters */
+
+  @keyframes countUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10px) scale(0.9);
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0px) scale(1);
+    }
+  }
+  
+  .animate-count {
+    display: inline-block;
+    opacity: 0;
+    animation: countUp 2s ease-in-out infinite;
+    animation-delay: calc(var(--count-to) * 0.01s);
+  }
 
 
 

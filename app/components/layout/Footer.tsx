@@ -1,7 +1,5 @@
 import Image from 'next/image'
-import { Button } from '../buttons/Button'
 import { Container } from './Container'
-import { TextField } from '../fields/Fields'
 import NavLinks from '../navigation/NavLinks'
 import { sanityClient } from '@/app/lib/sanityClient'
 import { fetchMenuQuery } from '@/app/lib/queries'

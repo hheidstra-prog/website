@@ -71,9 +71,6 @@ export default function MobileMenu({ menu }: MobileMenuProps) {
                 <button className="w-full py-3 font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200">
                   Log in
                 </button>
-                <button className="w-full py-3 font-medium text-white bg-black rounded-md hover:bg-gray-800">
-                  Download the app
-                </button>
               </div>
             </div>
           </div>

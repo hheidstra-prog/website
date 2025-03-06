@@ -59,7 +59,7 @@ export function HeroSection({ data }: HeroSectionProps) {
           </div>
           <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
             <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
-              Ook gezien in
+              {data.logosLabel}
             </p>
             <ul
               role="list"

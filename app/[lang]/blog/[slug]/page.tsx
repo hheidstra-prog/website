@@ -135,7 +135,7 @@ export default async function PostPage({ params }: {params: Promise<PostPageProp
         </div>
 
         {/* Sidebar (Side Sections) */}
-        <aside className="md:col-span-1 space-y-6 sticky top-20 self-start">
+        <aside className="hidden md:block md:col-span-1 space-y-6 sticky top-20 self-start">
           {sideSections?.map((section: Section, index) => (
             <RenderSideSection key={section._key+index} section={section} lang={lang} url={`/blog/${post.slug.current}`} headings={headings} />
           ))} 

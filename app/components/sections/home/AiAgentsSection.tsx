@@ -67,7 +67,7 @@ export default function AiAgentsSection({ data }: SectionProps) {
 
   return (
     <div className="relative w-full flex flex-col items-center justify-center bg-[#0A0E1A] overflow-hidden pt-24 pb-52">
-      <div className="text-center max-w-2xl px-0 mb-10">
+      <div className="text-center max-w-2xl px-0 mb-10 lg:mb-20">
         <h2 className="text-3xl md:text-4xl font-bold text-white">{data.title}</h2>
         <p className="text-gray-300 mt-3">{data.subtitle}</p>
       </div>
@@ -94,7 +94,7 @@ export default function AiAgentsSection({ data }: SectionProps) {
         </div>
 
         {/* Right Section: Image */}
-        <div className="relative w-full md:w-2/3 flex justify-center h-[500px]">
+        <div className="relative w-full md:w-2/3 flex justify-center h-[300px] lg:h-[500px]">
           <AnimatePresence custom={direction} mode="wait">
             <motion.div
               key={activeIndex}
@@ -111,7 +111,7 @@ export default function AiAgentsSection({ data }: SectionProps) {
                   alt={data.cards[activeIndex].image.alt || "AI Illustration"}
                   width={500}
                   height={450}
-                  className="w-full h-auto"
+                  className="w-full h-[95%] lg:h-full"
                 />
               )}
             </motion.div>
@@ -132,7 +132,7 @@ export default function AiAgentsSection({ data }: SectionProps) {
           </button>
 
           {/* Pagination Dots */}
-          <div className="absolute bottom-2 flex gap-2">
+          <div className="absolute -bottom-8 flex gap-2">
             {data.cards.map((_, index) => (
               <div
                 key={index}

@@ -9,8 +9,6 @@ import logofile from '@/images/logos/lm-logo-2.png'
 import Image from 'next/image'
 
 
-
-
 export async function Header({ lang }: { lang: string }) {
 
   // ✅ Fetch menu once on the server
@@ -28,7 +26,7 @@ export async function Header({ lang }: { lang: string }) {
           
           <div className="relative z-100 flex items-center gap-16">
 
-            <Link href={`/${lang}`} aria-label="Home">
+            <Link href={`/${lang}`} aria-label="Home" className='-ml-2'>
               <Image 
                 src={logofile}
                 alt="Launch Minds Logo"
@@ -51,7 +49,7 @@ export async function Header({ lang }: { lang: string }) {
             </div>
 
             {/* Mobile Hamburger Menu */}
-            <div className="lg:hidden">
+            <div className="lg:hidden items-center flex">
               {menu && <MobileMenu menu={menu} />}
             </div>
 

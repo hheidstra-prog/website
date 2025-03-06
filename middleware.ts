@@ -7,9 +7,6 @@ const { locales, defaultLocale } = i18nConfig;
 
 // Get the preferred locale
 function getLocale(request: NextRequest): string {
-  // ✅ Always prioritize the cookie if it exists
-
-
   // ✅ Only use Accept-Language if NO cookie is set
   const acceptLang = request.headers.get("Accept-Language");
   if (!acceptLang) return defaultLocale;
@@ -20,11 +17,20 @@ function getLocale(request: NextRequest): string {
 }
 
 export function middleware(request: NextRequest) {
-  if (request.nextUrl.pathname.startsWith("/_next")) {
-    return NextResponse.next();
-  }
-
   const { pathname } = request.nextUrl;
+
+  // ✅ Exclude static assets from middleware (fixes favicon.ico issue)
+  if (
+    pathname.startsWith("/_next") || // Next.js internals
+    pathname.startsWith("/favicon.ico") || // Favicon
+    pathname.startsWith("/favicon-64x64.png") || // Apple Touch Icon
+    pathname.startsWith("/robots.txt") || // SEO files
+    pathname.startsWith("/sitemap.xml") || // Sitemap
+    pathname.startsWith("/static") || // Other static assets
+    pathname.startsWith("/public") // Ensure public folder access
+  ) {
+    return NextResponse.next(); // Skip middleware
+  }
 
   // Check if the path already contains a locale
   const pathnameHasLocale = locales.some(
@@ -47,6 +53,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next).*)", // Skip internal paths like /_next
+    "/((?!_next|favicon.ico|robots.txt|sitemap.xml|static|public).*)", // Exclude static assets
   ],
 };

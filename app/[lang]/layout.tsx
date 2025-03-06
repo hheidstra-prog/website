@@ -1,4 +1,4 @@
-//import { type Metadata } from "next";
+import { type Metadata } from "next";
 import { Inter } from 'next/font/google'
 import clsx from 'clsx'
 import "@/styles/tailwind.css";
@@ -30,6 +30,17 @@ export const metadata: Metadata = {
   },
 };
 */
+
+export const metadata: Metadata = {
+  title: "LaunchMinds - AI Startup Accelerator",
+  description: "Helping AI-driven startups launch faster with AI automation.",
+  icons: {
+    icon: "/favicon-64x64.png",
+    shortcut: "/favicon-64x64.png", // Shortcut icon
+    apple: "/favicon-64x64.png",
+  },
+};
+
 
 type LangParams = {
   lang: typeof i18nConfig.locales[number]; // Use strong typing from i18nConfig
